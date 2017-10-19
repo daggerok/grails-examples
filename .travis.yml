@@ -15,6 +15,7 @@ script:
     for path in \
       grails-react \
       grails-angular \
+      grails-angularjs \
     ;
     do
       export TARGET="$ROOT/$path"

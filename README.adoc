@@ -4,3 +4,4 @@ This repository contains some grails playground projects and examples
 
 . link:grails-angular/[Grails + Angular]
 . link:grails-react/[Grails + React]
+. link:https://objectcomputing.com/products/grails/quickcasts/[Grails casts]

@@ -1,0 +1,26 @@
+= grails-angularjs | grails-examples image:https://travis-ci.org/daggerok/grails-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/grails-examples"]
+
+//tag::content[]
+
+.project quick start
+[source,bash]
+----
+grails create-app grails-angularjs --profile=angularjs
+
+#output
+| Application created at /path/to/grails-examples/grails-angularjs
+----
+
+.build project
+[source,bash]
+----
+bash gradlew clean build
+----
+
+.run
+[source,bash]
+----
+bash gradlew bootRun
+----
+
+//end::content[]
