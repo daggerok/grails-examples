@@ -22,6 +22,9 @@ include::../../grails-react/README.adoc[tags=content]
 == grails with angular profile
 include::../../grails-angular/README.adoc[tags=content]
 
+== grails with angularjs profile
+include::../../grails-angularjs/README.adoc[tags=content]
+
 == links
 . link:http://asciidoctor.org/docs/user-manual/#builtin-attributes[asciidoctor attributes]
 
