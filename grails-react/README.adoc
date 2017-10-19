@@ -1,10 +1,13 @@
-= grails react profile | grails-examples image:https://travis-ci.org/daggerok/grails-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/grails-examples"]
+= grails-react | grails-examples image:https://travis-ci.org/daggerok/grails-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/grails-examples"]
+
+//tag::content[]
 
 .project quick start
 [source,bash]
 ----
 grails create-app grails-react --profile=react
-# output
+
+# output:
 | Application created at /path/to/grails-examples/grails-react
 | This profile provides a client/server multi-project build structure. The server Grails app is using the rest-api profile with CORS enabled. It can be started using 'grails run-app' or using the Gradle wrapper:
 
@@ -28,3 +31,17 @@ For support, please use the Groovy Community Slack (https://groovycommunity.slac
 ----
 gradle wrapper --gradle-version=4.2.1 --distribution-type=all
 ----
+
+.build project
+[source,bash]
+----
+bash gradlew clean build
+----
+
+.run
+[source,bash]
+----
+bash gradlew bootRun
+----
+
+//end::content[]

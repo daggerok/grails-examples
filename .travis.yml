@@ -34,6 +34,7 @@ script:
   - >
     for path in \
       grails-react \
+      grails-angular \
     ;
     do
       export TARGET="$ROOT/$path"

@@ -16,8 +16,11 @@ ifndef::sourcedir[:sourcedir: ../../..]
 This documentation contains README's
 link:{github_url}[examples from grails-examples repository]
 
-== spring-boot under the hood
-include::../../01-spring-boot-under-the-hood/README.adoc[tags=content]
+== grails with react profile
+include::../../grails-react/README.adoc[tags=content]
+
+== grails with angular profile
+include::../../grails-angular/README.adoc[tags=content]
 
 == links
 . link:http://asciidoctor.org/docs/user-manual/#builtin-attributes[asciidoctor attributes]
