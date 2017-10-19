@@ -1,0 +1,5 @@
+= grails-examples image:https://travis-ci.org/daggerok/grails-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/grails-examples"]
+
+This repository is contains some grails playground projects
+
+. link:grails-react/[Grails + React]

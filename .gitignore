@@ -1,0 +1,36 @@
+!.gotkeep
+
+.DS_Store
+.gradle/
+!gradle-wrapper.jar
+
+build/
+out/
+**/src/main/resources/public/
+**/src/main/resources/static/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+node_modules/
+bower_components/
+yarn.lock
+package-lock.json
