@@ -1,7 +1,13 @@
+buildscript {
+  ext {
+    asciidocBuildDir = "$buildDir/asciidoc"
+  }
+}
+
 plugins {
   id "base"
-  id "org.asciidoctor.convert" version "1.5.3"
-  id "org.ajoberstar.git-publish" version "0.3.0"
+  id "org.asciidoctor.convert" version "1.5.6"
+  id "org.ajoberstar.git-publish" version "0.2.2"
 }
 
 group "daggerok"
@@ -29,22 +35,27 @@ asciidoctor {
       "endpoint-url": "https://daggerok.github.io/grails-examples"
 }
 
+asciidoctor.doLast {
+  file("$asciidocBuildDir/html5/404.html").text = file("$asciidocBuildDir/html5/index.html").text
+  file("$asciidocBuildDir/html5/.nojekyll").text = "\n"
+}
+
 asciidoctor.shouldRunAfter clean
 
 // read more: https://github.com/ajoberstar/gradle-git-publish
 gitPublish {
-  repoUri = "git@github.com:daggerok/grails-examples.git"
+  repoUri = "git@github.com:daggerok/spring-security-examples.git"
   branch = "gh-pages"
   contents {
-    from "$buildDir/asciidoc/html5"
-    from "$projectDir/src/static"
-    into "."
+    from("$asciidocBuildDir/html5")
+    from("$projectDir/src/static") {
+      into "."
+    }
   }
+  commitMessage = "Documentation for ${project.group}:${project.name}:$project.version"
 }
 
-build. dependsOn asciidoctor
+gitPublishPush.dependsOn asciidoctor
+gitPublishPush.shouldRunAfter clean, asciidoctor, build
 
-task deploy {
-  dependsOn gitPublishPush
-  shouldRunAfter clean, build
-}
+task deploy(dependsOn: gitPublishPush)
