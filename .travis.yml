@@ -5,7 +5,7 @@ jdk:
   - oraclejdk8
 install: true
 script:
-  - bash gradlew clean build
+  - bash gradlew clean build asciidoctor
   - export ROOT=$PWD
   - >
     for path in \
